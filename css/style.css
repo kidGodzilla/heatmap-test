@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+}
+.container > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+/* Boxes */
+.box, .sun {
+  position: relative;
+}
+
+.sun:before {
+  position: absolute;
+}
+
+.tail, .de-tail,
+.face, .mouth, .fin, .belly {
+  position: absolute;
+}
+.tail:before, .tail:after, .de-tail:before, .de-tail:after,
+.face:before,
+.face:after, .mouth:before, .mouth:after, .fin:before, .fin:after, .belly:before, .belly:after {
+  position: absolute;
+}
+
+.sun:before, .sun:after, .de-tail:before, .de-tail:after, .face:before, .face:after, .mouth:before, .mouth:after,
+.fin:before,
+.fin:after, .belly:before, .belly:after {
+  content: '';
+}
+
+.sun:before {
+  bottom: 0;
+  right: 0;
+  background-color: #fefcfb;
+  border-top-left-radius: 168px;
+  border-top-right-radius: 168px;
+  width: 336px;
+  height: 168px;
+}
+
+.tail {
+  left: 112px;
+  bottom: 0;
+  height: 56px;
+  width: 336px;
+}
+
+.tail-left {
+  background-color: #77dcd7;
+  width: 56px;
+  height: 56px;
+}
+.tail-left:before, .tail-left:after {
+  background-color: #77dcd7;
+  width: 56px;
+  height: 56px;
+  top: 0;
+}
+.tail-left:before {
+  right: 100%;
+  border-bottom-left-radius: 112px;
+}
+.tail-left:after {
+  left: 100%;
+  border-top-right-radius: 112px;
+}
+
+.tail-right {
+  background-color: #fde166;
+  width: 56px;
+  height: 56px;
+  left: 168px;
+}
+.tail-right:before, .tail-right:after {
+  background-color: #fde166;
+  width: 56px;
+  height: 56px;
+  top: 0;
+}
+.tail-right:before {
+  right: 100%;
+  border-top-left-radius: 112px;
+}
+.tail-right:after {
+  left: 100%;
+  border-bottom-right-radius: 112px;
+}
+
+.face {
+  background-color: #433f58;
+  top: 0;
+  right: 0;
+  width: 112px;
+  height: 168px;
+  -webkit-clip-path: circle(168px at center top);
+          clip-path: circle(168px at center top);
+}
+.face:before {
+  background-color: #433f58;
+  width: 168px;
+  height: 168px;
+  top: 0;
+  right: 56px;
+  border-bottom-left-radius: 168px;
+}
+
+.mouth {
+  background-color: #f2718c;
+  top: 56px;
+  right: 56px;
+  width: 168px;
+  height: 112px;
+}
+.mouth:before {
+  background-color: #fefcfb;
+  top: -12.44444px;
+  left: 74.48px;
+  border-top-left-radius: 18.66667px;
+  border-top-right-radius: 18.66667px;
+  width: 22.4px;
+  height: 12.44444px;
+}
+
+.fin {
+  background-color: #fde166;
+  width: 56px;
+  height: 56px;
+  top: 112px;
+  right: 0;
+}
+.fin:before, .fin:after {
+  background-color: #fde166;
+  width: 56px;
+  height: 56px;
+}
+.fin:before {
+  bottom: 56px;
+  border-top-right-radius: 112px;
+}
+.fin:after {
+  top: 100%;
+  border-bottom-left-radius: 112px;
+}
+
+.belly {
+  background-color: #433f58;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 168px;
+}
+.belly:after {
+  background-color: #433f58;
+  width: 168px;
+  height: 168px;
+  top: 0;
+  left: 56px;
+  border-bottom-right-radius: 168px;
+}
+
+/* Setting backgrounds */
+.box-pink {
+  background-color: #f2718c;
+}
+
+.box-turq {
+  background-color: #51c2cb;
+}
+
+.box-sand {
+  background-color: #f7e4d8;
+}
+
+.box-turqsub {
+  background-color: #77dcd7;
+}
+
+/* Disclaimer */
+/* This is a popular Dribbble shot to code: https://dribbble.com/shots/3381074-Animals by the very talented Dennis Hoogstad. */
+.disclaimer {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #fefcfb;
+  bottom: 14px;
+  right: 14px;
+}
+.disclaimer a {
+  color: #fefcfb;
+}
