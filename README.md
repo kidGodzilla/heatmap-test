@@ -48,6 +48,9 @@ The heatmaps are rendered using **Heatmap.js**, which can be found here: https:/
 
 # Coding Challenge
 
+Feel free to ask as many questions as you need. I can join you on chat to explain anything you need.
+
+
 1. Currently, you must press `SHIFT + H+M` to toggle the heatmap on and off. Change this to  `CTRL + SHIFT + H`.
 
 2. Currently, the user must set a project ID (window._GumshoeProject). Since we are already using the **md5** library, let's just use an `md5()` of `location.hostname` instead.
