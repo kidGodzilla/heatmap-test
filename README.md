@@ -1,4 +1,4 @@
-# heatmap-test
+# Heatmap Coding Challenge
 
 ## Setup
 
