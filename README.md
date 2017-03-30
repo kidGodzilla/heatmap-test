@@ -53,6 +53,6 @@ Feel free to ask as many questions as you need. I can join you on chat to explai
 
 1. Currently, you must press `SHIFT + H+M` to toggle the heatmap on and off. Change this to  `CTRL + SHIFT + H`.
 
-2. Currently, the user must set a project ID (window._GumshoeProject). Since we are already using the **md5** library, let's just use an `md5()` of `location.hostname` instead.
+2. Currently, the user must set a project ID (`window._GumshoeProject`). Since we are already using the **md5** library, let's just use an `md5()` of `location.hostname` instead.
 
 3. Currently, `mousemove`, `click`, and `touchstart` all are tracked equally (line 297). But, we think Clicks and Taps are more important. Create a separate event listener for `click` and `touchstart` events so they can get 10 points of value instead of just 1.
