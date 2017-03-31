@@ -15,38 +15,9 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       files: ['*'],
-      tasks: ['concat', 'uglify'],
       options: {
         livereload: true,
         nospawn: true
-      }
-    },
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['node_modules/lodash/lodash.min.js', 'framework/core.js', 'framework/loader.js', 'framework/utils.js', 'framework/model.js', 'framework/router.js', 'framework/template.js', 'js/models.js', 'js/app.js', 'js/helpers.js', 'js/routes.js', 'js/events.js'],
-        dest: 'dist/app.js'
-      }
-    },
-    cssmin: {
-      target: {
-        files: [{
-          src: ['assets/css/app.css'],
-          dest: 'dist/app.min.css'
-        }]
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! Application <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      default: {
-        files: {
-          'dist/dependencies.min.js': ['dist/dependencies.js'],
-          'dist/app.min.js': ['dist/app.js']
-        }
       }
     },
     connect: {
@@ -80,5 +51,5 @@ module.exports = function (grunt) {
 
   grunt.registerTask('server', 'connect:keepalive');
 
-  grunt.registerTask('default', ['connect:base', 'concat', 'uglify', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['connect:base', 'watch']);
 };
